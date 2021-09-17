@@ -8,9 +8,9 @@ using namespace std;
 
 struct huffman_node
 {
-	char id;																				//character 
-	int freq;																				//frequency of the character
-	string code;																			//huffman code for the character
+	char id;//character 
+	int freq;//frequency of the character
+	string code;//huffman code for the character
 	huffman_node* left;
 	huffman_node* right;
 	huffman_node()
@@ -23,7 +23,7 @@ typedef huffman_node* node_ptr;
 class huffman
 {
 protected:
-	node_ptr node_array[128];																//array for 128characters in the Ascii Table
+	node_ptr node_array[128];//array for 128characters in the Ascii Table
 	fstream in_file, out_file;
 	node_ptr child, parent, root;
 	char id;
@@ -36,12 +36,12 @@ protected:
 			return c1->freq > c2->freq;
 		}
 	};
-	priority_queue<node_ptr, vector<node_ptr>, compare> pq;									//priority queue of frequency from high to low
+	priority_queue<node_ptr, vector<node_ptr>, compare> pq;//priority queue of frequency from high to low
 	void create_node_array();																
-	void traverse(node_ptr, string);														//traverse the huffman tree and get huffman code for a character
-	int binary_to_decimal(string&);															//convert a 8-bit 0/1 string of binary code to a decimal integer 
-	string decimal_to_binary(int);															//convert a decimal integer to a 8-bit 0/1 string of binary code
-	inline void build_tree(string&, char);													//build the huffman tree according to information from file 
+	void traverse(node_ptr, string);//traverse the huffman tree and get huffman code for a character
+	int binary_to_decimal(string&);//convert a 8-bit 0/1 string of binary code to a decimal integer 
+	string decimal_to_binary(int);//convert a decimal integer to a 8-bit 0/1 string of binary code
+	inline void build_tree(string&, char);//build the huffman tree according to information from file 
 
 public:
 	huffman(string, string);
