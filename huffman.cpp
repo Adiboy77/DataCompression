@@ -39,7 +39,7 @@ string huffman::decimal_to_binary(int in)
 		temp += ('0' + in % 2);
 		in /= 2;
 	}
-	result.append(8 - temp.size(), '0');													//append '0' ahead to let the result become fixed length of 8
+	result.append(8 - temp.size(), '0');//append '0' ahead to let the result become fixed length of 8
 	for (int i = temp.size() - 1; i >= 0; i--)												
 	{
 		result += temp[i];
@@ -65,7 +65,7 @@ inline void huffman::build_tree(string& path, char a_code)
 			current = current->right;														 
 		}
 	}
-	current->id = a_code; //attach id to the leaf
+	current->id = a_code;//attach id to the leaf
 }
 
 huffman::huffman(string in, string out)
