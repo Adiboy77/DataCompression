@@ -1,4 +1,5 @@
-# Huffman Coding
+# Huffman Coding : 
+### (Encrypting the input file & decrypting the original text back)
 A C++ compression and decompression project based on Huffman Coding.
 
 ## Introduction :
