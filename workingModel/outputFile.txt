@@ -1,0 +1,48 @@
+First way of representing encryption using binary codes: 
+
+Encryption phase: 
+Binary code assigned to characters based on their frequencies: 
+d 1111
+f 110
+  01101
+e 10
+a 0111
+k 01011
+j 01010
+b 001
+h 01100
+s 0100
+c 1110
+n 000
+
+Encrypting the input file text as: 
+0111001001111011101110111111111111111110101010101010101010110110110110110110011010010010000100011101001100110001110101101010000000000
+
+Decrypting the original text back: 
+abbcccddddeeeeeeeeeeffffff bbnsasfhakjnnn
+
+
+
+
+Second way of representing encryption using unsigned characters: 
+
+Encryption phase: 
+Unsigned chars assigned to input characters based on their frequencies: 
+d ß
+f Ö
+  Ý
+e Ò
+a ×
+k Û
+j Ú
+b Ñ
+h Ü
+s Ô
+c Þ
+n Ð
+
+Encrypting the input file text as: 
+×ÑÑÞÞÞßßßßÒÒÒÒÒÒÒÒÒÒÖÖÖÖÖÖÝÑÑÐÔ×ÔÖÜ×ÛÚÐÐÐ
+
+Decrypting the original text back: 
+abbcccddddeeeeeeeeeeffffff bbnsasfhakjnnn
